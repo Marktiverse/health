@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>科林助聽器 衡陽旗艦門市｜健康講座手機導覽與促購試算</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap');
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+    .safe-bottom {
+      padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 65px);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen safe-bottom selection:bg-emerald-500 selection:text-white">
+
+  <!-- 手機頂部緊湊型 Header -->
+  <header class="bg-gradient-to-r from-emerald-900 via-teal-900 to-slate-900 text-white shadow-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-300 font-black text-sm">
+          科
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-[10px] bg-emerald-500 text-white font-bold px-1.5 py-0.2 rounded-full">衡陽旗艦店</span>
+            <span class="text-[10px] text-emerald-200">2026.09 新價版</span>
+          </div>
+          <h1 class="text-sm font-bold tracking-tight line-clamp-1">健康講座・科立健促購系統</h1>
+        </div>
+      </div>
+      <!-- 電腦端平鋪導覽列 (已移除 Python 項目) -->
+      <nav class="hidden sm:flex items-center gap-2 text-xs font-medium">
+        <a href="#timeline" class="px-2.5 py-1 rounded-lg hover:bg-white/10 transition">活動流程</a>
+        <a href="#scripts" class="px-2.5 py-1 rounded-lg hover:bg-white/10 transition">主持提詞</a>
+        <a href="#pricelist" class="px-2.5 py-1 rounded-lg hover:bg-white/10 transition">商品價目</a>
+        <a href="#calculator" class="px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-400/40 transition">促購試算</a>
+        <a href="#pitch" class="px-2.5 py-1 rounded-lg hover:bg-white/10 transition">桌邊話術</a>
+      </nav>
+      <!-- 手機端試算快捷按鈕 -->
+      <button onclick="scrollToSection('calculator')" class="sm:hidden text-xs bg-amber-500/20 text-amber-300 border border-amber-400/40 px-2.5 py-1.5 rounded-lg font-bold flex items-center gap-1 active:scale-95 transition">
+        <i class="fa-solid fa-calculator text-[11px]"></i> 試算
+      </button>
+    </div>
+  </header>
+
+  <!-- 主內容容器 -->
+  <main class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-4 sm:py-8 space-y-6 sm:space-y-10">
+
+    <!-- 活動基本資訊卡片 -->
+    <section class="bg-white rounded-2xl p-4 sm:p-6 shadow-xs border border-slate-200/80">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3.5">
+        <div>
+          <span class="text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full inline-block">
+            VIP 衛教沙龍
+          </span>
+          <h2 class="text-lg sm:text-2xl font-black text-slate-900 mt-1">
+            金頭腦吃出好記性 為你的健康預儲值
+          </h2>
+          <div class="text-xs text-slate-500 mt-1 space-y-0.5 sm:space-y-0 sm:flex sm:gap-3">
+            <div><i class="fa-regular fa-clock text-emerald-600 mr-1"></i>14:30 - 16:30 (120分)</div>
+            <div><i class="fa-solid fa-user-doctor text-emerald-600 mr-1"></i>徐于淑 國考營養師</div>
+            <div><i class="fa-solid fa-gift text-emerald-600 mr-1"></i>全勤贈限定保健品</div>
+          </div>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-2.5 sm:p-3.5 text-center sm:text-right">
+          <div class="text-[11px] font-semibold text-amber-800">今日現場專案折扣</div>
+          <div class="text-base sm:text-xl font-black text-amber-600">最高現折 35% OFF</div>
+          <div class="text-[10px] text-slate-500 font-mono mt-0.5">2罐8折 / 4罐75折 / 6罐7折 / 8罐65折</div>
+        </div>
+      </div>
+
+      <!-- 同仁任務手機橫向滑動卡片 -->
+      <div class="pt-3">
+        <div class="text-xs font-bold text-slate-700 mb-2 flex items-center justify-between">
+          <span><i class="fa-solid fa-users text-emerald-600 mr-1"></i>同仁職責分配</span>
+          <span class="text-[10px] text-slate-400 font-normal">可左右滑動 ➔</span>
+        </div>
+        <div class="flex gap-2 overflow-x-auto no-scrollbar pb-1 text-center">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 min-w-[95px] shrink-0">
+            <div class="text-[10px] text-slate-400 font-medium">主持串場</div>
+            <div class="text-sm font-bold text-slate-800">玥璇</div>
+            <div class="text-[10px] text-emerald-700 font-medium">破冰・專案</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 min-w-[95px] shrink-0">
+            <div class="text-[10px] text-slate-400 font-medium">引導簽到</div>
+            <div class="text-sm font-bold text-slate-800">品嫻</div>
+            <div class="text-[10px] text-emerald-700 font-medium">發單・動線</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 min-w-[95px] shrink-0">
+            <div class="text-[10px] text-slate-400 font-medium">入座＆促購</div>
+            <div class="text-sm font-bold text-slate-800">淳妤</div>
+            <div class="text-[10px] text-emerald-700 font-medium">桌邊促成</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 min-w-[95px] shrink-0">
+            <div class="text-[10px] text-slate-400 font-medium">入座＆促購</div>
+            <div class="text-sm font-bold text-slate-800">紜安</div>
+            <div class="text-[10px] text-emerald-700 font-medium">桌邊促成</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 min-w-[95px] shrink-0">
+            <div class="text-[10px] text-slate-400 font-medium">收單結帳</div>
+            <div class="text-sm font-bold text-slate-800">哲禎</div>
+            <div class="text-[10px] text-emerald-700 font-medium">收單・保留卡</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 min-w-[95px] shrink-0">
+            <div class="text-[10px] text-slate-400 font-medium">影音＆外客</div>
+            <div class="text-sm font-bold text-slate-800">劭恩</div>
+            <div class="text-[10px] text-emerald-700 font-medium">影片・隔離</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: 活動時間軸 -->
+    <section id="timeline" class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-5 bg-emerald-600 rounded-full inline-block"></span>
+          講座流程 SOP 與執行分工
+        </h3>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xs border border-slate-200 divide-y divide-slate-100 overflow-hidden">
+        <!-- 節點 1 -->
+        <div class="p-3.5 sm:p-5 hover:bg-slate-50 transition">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-black bg-emerald-100 text-emerald-800">
+              14:30 - 14:45 (15分)
+            </span>
+            <span class="text-xs font-bold text-slate-800">【溫馨迎賓】</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">親切迎接長輩入座，介紹點心與保健展示區，遞送 DM 與選購單。</p>
+          <div class="mt-2 text-[11px] bg-slate-50 p-2 rounded-lg text-slate-500 flex flex-wrap gap-x-3 gap-y-1">
+            <span><strong>簽到：</strong>品嫻</span>
+            <span><strong>入座：</strong>淳妤、紜安、哲禎</span>
+            <span><strong>影片：</strong>劭恩</span>
+            <span><strong>主持待命：</strong>玥璇</span>
+          </div>
+        </div>
+
+        <!-- 節點 2 -->
+        <div class="p-3.5 sm:p-5 hover:bg-slate-50 transition">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-black bg-emerald-100 text-emerald-800">
+              14:50 - 15:00 (10分)
+            </span>
+            <span class="text-xs font-bold text-slate-800">主持人暖場</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">關心天氣變化與熱茶溫度，宣告活動 15:00 準時開始，讓長輩放鬆就座。</p>
+          <div class="mt-2 text-[11px] bg-slate-50 p-2 rounded-lg text-slate-500">
+            <strong>主責主持：</strong>玥璇 ｜ <strong>協助：</strong>全員協助加茶巡場
+          </div>
+        </div>
+
+        <!-- 節點 3 -->
+        <div class="p-3.5 sm:p-5 hover:bg-slate-50 transition">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-black bg-teal-100 text-teal-800">
+              15:00 - 15:10 (10分)
+            </span>
+            <span class="text-xs font-bold text-slate-800">【主場破冰】</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">破冰開場「金頭腦吃出好記性」，宣布全勤即贈科立健保健品，隆重介紹徐于淑營養師。</p>
+          <div class="mt-2 text-[11px] bg-slate-50 p-2 rounded-lg text-slate-500">
+            <strong>主持：</strong>玥璇 ｜ <strong>講師：</strong>徐于淑 國考營養師
+          </div>
+        </div>
+
+        <!-- 節點 4 -->
+        <div class="p-3.5 sm:p-5 hover:bg-slate-50 transition">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-black bg-blue-100 text-blue-800">
+              15:10 - 15:50 (40分)
+            </span>
+            <span class="text-xs font-bold text-slate-800">【專業衛教】</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">徐營養師生活化對症解析日常保養。同仁入座陪伴長輩聆聽，適度帶動氣氛。</p>
+          <div class="mt-2 text-[11px] bg-slate-50 p-2 rounded-lg text-slate-500 flex flex-wrap gap-x-3 gap-y-1">
+            <span><strong>陪同長輩：</strong>品嫻、紜安、哲禎、淳妤</span>
+            <span><strong>臨時客隔離：</strong>劭恩</span>
+          </div>
+        </div>
+
+        <!-- 節點 5 (促購) -->
+        <div class="p-3.5 sm:p-5 bg-amber-50/50 hover:bg-amber-50 transition border-l-4 border-amber-500">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-black bg-amber-200 text-amber-900">
+              15:50 - 16:05 (15-20分)
+            </span>
+            <span class="text-xs font-black text-amber-950">🔥【黃金促購】</span>
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed">玥璇揭曉專案（2罐8折/4罐75折/6罐7折/8罐65折），同仁坐於長輩身旁二擇一精準促成。</p>
+          <div class="mt-2 text-[11px] bg-white border border-amber-200 p-2 rounded-lg text-amber-900 flex flex-wrap gap-x-3 gap-y-1 font-medium">
+            <span><strong>主持宣告：</strong>玥璇</span>
+            <span><strong>桌邊主力：</strong>淳妤、紜安、品嫻、哲禎</span>
+          </div>
+        </div>
+
+        <!-- 節點 6 -->
+        <div class="p-3.5 sm:p-5 hover:bg-slate-50 transition">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-black bg-purple-100 text-purple-800">
+              16:05 - 16:30 (25分)
+            </span>
+            <span class="text-xs font-bold text-slate-800">【收單發禮】</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">哲禎結帳收單；憑單致贈參加禮。若現金不足或猶豫，立即開立 48 小時優惠保留卡。</p>
+          <div class="mt-2 text-[11px] bg-slate-50 p-2 rounded-lg text-slate-500 flex flex-wrap gap-x-3 gap-y-1">
+            <span><strong>結帳核單：</strong>哲禎</span>
+            <span><strong>發禮送客：</strong>全員同仁</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: 主持人逐字講稿 -->
+    <section id="scripts" class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-5 bg-teal-600 rounded-full inline-block"></span>
+          主持人（玥璇）講稿提詞
+        </h3>
+        <span class="text-[11px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full border border-teal-200">手機提詞模式</span>
+      </div>
+
+      <div class="space-y-3">
+        <!-- 講稿 1 -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs">
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-full">14:50 暖場入座</span>
+            <button onclick="copyText('script1')" class="text-xs text-slate-400 hover:text-emerald-600 p-1">
+              <i class="fa-regular fa-copy mr-1"></i>複製
+            </button>
+          </div>
+          <div id="script1" class="text-sm text-slate-700 space-y-2 leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <p>「各位貴賓，午安！歡迎大家來到我們科林助聽器衡陽旗艦門市！今天外頭天氣變化大，需要熱茶再跟我們門市同仁說。」</p>
+            <p>「桌上的點心、茶水大家不用客氣，盡情享用。如果冷氣溫度需要調整，或者茶水需要添加，隨時舉手跟我們現場同仁說一聲。今天我們就像老朋友聚會，大家放輕鬆，我們活動在三點準時開始，請大家安心就座！」</p>
+          </div>
+        </div>
+
+        <!-- 講稿 2 -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs">
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 bg-teal-100 text-teal-800 text-[10px] font-bold rounded-full">15:00 主場破冰</span>
+            <button onclick="copyText('script2')" class="text-xs text-slate-400 hover:text-teal-600 p-1">
+              <i class="fa-regular fa-copy mr-1"></i>複製
+            </button>
+          </div>
+          <div id="script2" class="text-sm text-slate-700 space-y-2 leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <p>「大家午安！我是今天的主持人玥璇，今天看到現場坐得滿滿的，真的非常開心！今天這場活動，是我們衡陽門市特別為貴賓們舉辦的『健康講座』。」</p>
+            <p>「今天我們有兩件最重要的事情：<br>
+            <strong>第一，幫大家的健康加值</strong>：今天主題是『金頭腦吃出好記性 為你的健康預儲值』，聽完回去都能靈活又有精神！<br>
+            <strong>第二，把心意送給大家</strong>：只要全程參與聽完專業衛教，散會時憑簽到單，就可以直接帶走一份我們準備的『當日限定科立健保健品乙組』！」</p>
+            <p>「我們邀請到最懂身體需要的<strong>徐于淑 資深國考營養師</strong>來到現場！聽講過程中營養師會送好禮喔！讓我們用最熱烈的掌聲歡迎徐于淑營養師！」</p>
+          </div>
+        </div>
+
+        <!-- 講稿 3 -->
+        <div class="bg-white rounded-2xl p-4 border border-amber-300 shadow-xs bg-amber-50/30">
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 bg-amber-200 text-amber-900 text-[10px] font-bold rounded-full">15:50 揭曉促購</span>
+            <button onclick="copyText('script3')" class="text-xs text-amber-700 hover:text-amber-900 p-1">
+              <i class="fa-regular fa-copy mr-1"></i>複製
+            </button>
+          </div>
+          <div id="script3" class="text-sm text-slate-800 space-y-2 leading-relaxed bg-white p-3 rounded-xl border border-amber-200">
+            <p>「再次掌聲謝謝徐于淑營養師帶來這麼棒的健康秘訣！健康是給自己最好的存款，常常很多用戶跟我們說，市面上保健品那麼多，不知道該怎麼選。」</p>
+            <p>「今天既然大家來到衡陽旗艦門市，總公司特別為今天現場的貴賓準備<strong>『只有今天茶會現場才有的專屬優惠組合』</strong>！」</p>
+            <p class="font-bold text-amber-900">「現場限時優惠：【兩罐 8 折】、【四罐 75 折】、【六罐 7 折】、【八罐 65 折】！同仁現在都在各位身邊，想針對哪方面保養，隨時幫您試算！」</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 2026.09 最新價目表 -->
+    <section id="pricelist" class="space-y-3">
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-5 bg-emerald-600 rounded-full inline-block"></span>
+            <h3 class="text-base sm:text-xl font-bold text-slate-900">科立健商品價目表</h3>
+          </div>
+          <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">2026.09.24版</span>
+        </div>
+        <!-- 搜尋與篩選器 -->
+        <div class="grid grid-cols-12 gap-2">
+          <div class="col-span-8 relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+            <input type="text" id="productSearch" oninput="filterProducts()" placeholder="搜尋品名 (如: 穩好醣)..." class="w-full pl-8 pr-3 py-2 text-xs rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          </div>
+          <div class="col-span-4">
+            <select id="categoryFilter" onchange="filterProducts()" class="w-full py-2 px-2 text-xs rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <option value="ALL">全部類別</option>
+              <option value="保健">保健 (10)</option>
+              <option value="醫材">醫材 (1)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- 手機專屬：商品卡片列表 -->
+      <div id="mobileProductCards" class="space-y-2.5 md:hidden">
+        <!-- JS 動態生成觸控商品卡 -->
+      </div>
+
+      <!-- 平板/電腦專屬：表格檢視 -->
+      <div class="hidden md:block bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-50 text-slate-700 text-xs font-bold uppercase border-b border-slate-200">
+              <th class="py-3 px-4 w-16 text-center">類別</th>
+              <th class="py-3 px-4 font-mono">料號</th>
+              <th class="py-3 px-4">商品名稱</th>
+              <th class="py-3 px-4">規格</th>
+              <th class="py-3 px-4 text-right">建議售價</th>
+              <th class="py-3 px-4">備註</th>
+              <th class="py-3 px-4 text-center w-28">操作</th>
+            </tr>
+          </thead>
+          <tbody id="desktopProductTable" class="divide-y divide-slate-100 text-slate-700">
+            <!-- JS 動態生成桌機版表格行 -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 現場促購試算機 -->
+    <section id="calculator" class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-5 bg-amber-500 rounded-full inline-block"></span>
+          黃金促購階梯試算機
+        </h3>
+        <button onclick="resetCart()" class="text-xs text-slate-400 hover:text-rose-600 px-2 py-1">
+          <i class="fa-solid fa-rotate-left mr-0.5"></i>重設
+        </button>
+      </div>
+
+      <!-- 快捷情境組合 -->
+      <div class="flex gap-2 overflow-x-auto no-scrollbar pb-1 text-xs">
+        <button onclick="applyPreset('mobility_sugar')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-3 py-2 rounded-xl shrink-0 font-medium active:scale-95 transition">
+          🔥 行動代謝組 (4罐75折)
+        </button>
+        <button onclick="applyPreset('eyes_sleep')" class="bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200 px-3 py-2 rounded-xl shrink-0 font-medium active:scale-95 transition">
+          👁️ 晶亮好眠組 (4罐75折)
+        </button>
+        <button onclick="applyPreset('max_discount')" class="bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 px-3 py-2 rounded-xl shrink-0 font-bold active:scale-95 transition">
+          👑 尊榮全家包 (8罐65折)
+        </button>
+      </div>
+
+      <!-- 試算大卡片 -->
+      <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-white rounded-2xl p-4 sm:p-6 shadow-xl relative overflow-hidden">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-xs text-emerald-400 font-mono font-bold uppercase">Live Calculator</span>
+          <span id="discountBadge" class="bg-slate-700 text-slate-300 text-xs font-black px-2.5 py-0.5 rounded-full border border-slate-600">
+            原價計算中
+          </span>
+        </div>
+
+        <div class="space-y-1.5 border-y border-slate-700/80 py-3 my-2 text-xs">
+          <div class="flex justify-between text-slate-300">
+            <span>原價合計</span>
+            <span id="calcOriginalPrice" class="font-mono line-through text-slate-400">NT$ 0</span>
+          </div>
+          <div class="flex justify-between text-amber-300 font-medium">
+            <span id="calcDiscountRateLabel">現場折抵 (0%)</span>
+            <span id="calcDiscountSaved" class="font-mono">- NT$ 0</span>
+          </div>
+          <div class="flex justify-between items-baseline pt-1">
+            <span class="text-sm font-bold text-white">現場專案價</span>
+            <span class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono" id="calcFinalPrice">NT$ 0</span>
+          </div>
+          <div class="flex justify-between text-[11px] text-slate-400">
+            <span>平均每罐折合</span>
+            <span id="calcAvgPrice" class="font-mono text-slate-300">NT$ 0</span>
+          </div>
+        </div>
+
+        <!-- 階梯進度提示條 -->
+        <div class="mt-3">
+          <div class="flex justify-between text-[11px] font-semibold mb-1">
+            <span id="tierNextHint" class="text-emerald-300">挑選商品啟動折扣</span>
+            <span id="tierStatusLabel" class="text-slate-300 font-mono">0 罐</span>
+          </div>
+          <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden flex">
+            <div id="tierProgressBar" class="bg-gradient-to-r from-emerald-400 via-teal-400 to-amber-400 h-full w-0 transition-all duration-300"></div>
+          </div>
+          <div class="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
+            <span>2罐8折</span>
+            <span>4罐75折</span>
+            <span>6罐7折</span>
+            <span>8罐65折</span>
+          </div>
+        </div>
+
+        <!-- 即時話術提示 -->
+        <div class="mt-3 bg-white/10 rounded-xl p-2.5 text-xs text-slate-200 leading-relaxed border border-white/10">
+          <div class="text-emerald-300 font-bold text-[11px] mb-0.5"><i class="fa-solid fa-bullhorn mr-1"></i>桌邊促成話術：</div>
+          <p id="pitchPromptText">「張大哥，今天只要帶 2 罐就直接打 8折！您平常注重活力代謝還是手腳靈活？先幫您搭配一組試試看！」</p>
+        </div>
+
+        <!-- 48H 保留卡按鈕 -->
+        <button onclick="openHoldCardModal()" class="mt-3 w-full bg-amber-500 hover:bg-amber-600 active:scale-98 text-slate-950 font-bold py-2.5 px-3 rounded-xl text-xs sm:text-sm shadow flex items-center justify-center gap-1.5 transition">
+          <i class="fa-solid fa-file-shield"></i> 長輩猶豫/現金不足？開立【48小時保留憑單】
+        </button>
+      </div>
+
+      <!-- 已選商品清單 -->
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs">
+        <div class="flex justify-between items-center mb-2 pb-2 border-b border-slate-100">
+          <span class="text-xs font-bold text-slate-800">
+            <i class="fa-solid fa-cart-shopping text-emerald-600 mr-1"></i>目前選購品項
+          </span>
+          <span id="cartTotalItemsBadge" class="text-[11px] bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded-full">
+            共 0 件
+          </span>
+        </div>
+        <div id="cartItemsList" class="space-y-2 max-h-64 overflow-y-auto pr-1">
+          <!-- JS 動態生成已選購物車品項 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: 桌邊促成避坑話術 -->
+    <section id="pitch" class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-5 bg-rose-600 rounded-full inline-block"></span>
+          桌邊避坑話術 ＆ 保留卡 SOP
+        </h3>
+      </div>
+
+      <div class="space-y-3">
+        <!-- 避坑話術 -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
+          <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-comments text-emerald-600"></i> 二擇一選擇題（切勿問是非題）
+          </div>
+          <div class="bg-rose-50 border border-rose-200 rounded-xl p-3 text-xs">
+            <span class="text-rose-700 font-bold block mb-1">❌ 致命錯誤（是非題直覺拒絕）：</span>
+            <p class="text-rose-900 font-mono">「大哥，今天有優惠你要不要買？」</p>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-xs">
+            <span class="text-emerald-800 font-bold block mb-1">⭕ 專業引導（二擇一導向）：</span>
+            <p class="text-emerald-950 font-medium">
+              「張先生，您剛剛聽徐營養師講得這麼清楚，是覺得代謝活力的<strong>【穩好醣】</strong>比較符合您的需要，還是想先試試上下樓梯手腳靈活的<strong>【固好捷】</strong>呢？」
+            </p>
+          </div>
+        </div>
+
+        <!-- 48小時保留卡應對 SOP -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-2 text-xs">
+          <div class="font-bold text-slate-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-clock-rotate-left text-amber-600"></i> 長輩沒帶夠現金？三步鎖單
+          </div>
+          <div class="space-y-1.5 text-slate-600">
+            <p>1. <strong>肯定同理：</strong>「大哥沒關係！保健是長期的事，跟家人討論非常合理！」</p>
+            <p>2. <strong>鎖定名額：</strong>「因為今天 75 折/65 折專案是營養師茶會限定，我先幫您填一張<strong>【48小時優惠保留卡】</strong>把今天的特惠價鎖住！」</p>
+            <p>3. <strong>哲禎核單：</strong>交由哲禎蓋章登記，兩天內回門市結帳仍享今天專案價。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 手機專屬常駐懸浮試算底欄 -->
+  <div id="stickyMiniCart" class="fixed bottom-14 inset-x-0 bg-slate-900/95 backdrop-blur text-white px-4 py-2 border-t border-slate-700/80 z-30 transition-transform duration-300 sm:hidden">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="relative">
+          <i class="fa-solid fa-cart-shopping text-emerald-400 text-base"></i>
+          <span id="miniCartCountBadge" class="absolute -top-1.5 -right-2 bg-amber-500 text-slate-950 text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </div>
+        <div>
+          <div class="text-[11px] text-slate-300 flex items-center gap-1">
+            <span>現場價:</span>
+            <strong id="miniCartFinalPrice" class="text-sm font-black text-emerald-400 font-mono">NT$ 0</strong>
+          </div>
+          <div id="miniCartHint" class="text-[10px] text-amber-300 font-medium">選 2 罐立即享 8 折</div>
+        </div>
+      </div>
+      <button onclick="scrollToSection('calculator')" class="bg-gradient-to-r from-emerald-500 to-teal-500 active:scale-95 text-slate-950 font-bold px-3 py-1.5 rounded-xl text-xs flex items-center gap-1 shadow">
+        查看明細 <i class="fa-solid fa-chevron-up text-[10px]"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 手機專屬底部快捷導覽列 -->
+  <nav class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-slate-200 z-40 flex justify-around items-center py-2 px-1 text-slate-500 text-[10px] font-medium sm:hidden">
+    <button onclick="scrollToSection('timeline')" class="flex flex-col items-center gap-0.5 active:text-emerald-700">
+      <i class="fa-solid fa-list-check text-sm"></i>
+      <span>流程</span>
+    </button>
+    <button onclick="scrollToSection('scripts')" class="flex flex-col items-center gap-0.5 active:text-emerald-700">
+      <i class="fa-solid fa-microphone-lines text-sm"></i>
+      <span>提詞</span>
+    </button>
+    <button onclick="scrollToSection('pricelist')" class="flex flex-col items-center gap-0.5 active:text-emerald-700">
+      <i class="fa-solid fa-table-list text-sm"></i>
+      <span>價目表</span>
+    </button>
+    <button onclick="scrollToSection('calculator')" class="flex flex-col items-center gap-0.5 text-emerald-700 font-bold">
+      <i class="fa-solid fa-calculator text-sm"></i>
+      <span>試算機</span>
+    </button>
+    <button onclick="scrollToSection('pitch')" class="flex flex-col items-center gap-0.5 active:text-emerald-700">
+      <i class="fa-solid fa-comments text-sm"></i>
+      <span>話術</span>
+    </button>
+  </nav>
+
+  <!-- 48 小時優惠保留卡彈出視窗 -->
+  <div id="holdCardModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-xs z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white rounded-t-3xl sm:rounded-2xl max-w-lg w-full p-5 shadow-2xl border border-slate-200 space-y-3.5 max-h-[85vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-100 pb-2.5">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold">
+            <i class="fa-solid fa-stamp"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-slate-900">48小時限時優惠保留憑單</h4>
+            <div class="text-[10px] text-slate-400">科林助聽器 衡陽旗艦門市</div>
+          </div>
+        </div>
+        <button onclick="closeHoldCardModal()" class="text-slate-400 hover:text-slate-600 p-1">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <div class="space-y-2.5 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-600 mb-1">貴賓姓名</label>
+          <input type="text" id="holdCardName" placeholder="例如：張福榮 先生" class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-600 mb-1">保留選購內容與折數</label>
+          <div id="holdCardSummary" class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-slate-700 font-mono">
+            尚未選擇商品
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-[11px]">
+          <div class="bg-amber-50 border border-amber-200 p-2 rounded-xl text-amber-900">
+            <span class="block text-slate-400 text-[10px]">專案保留期限</span>
+            <strong id="holdExpiryTime">48小時內有效</strong>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 p-2 rounded-xl text-emerald-900">
+            <span class="block text-slate-400 text-[10px]">門市核單同仁</span>
+            <strong>哲禎 / 衡陽團隊</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-2 flex gap-2">
+        <button onclick="printHoldCard()" class="flex-1 bg-emerald-700 active:bg-emerald-800 text-white font-bold py-2.5 rounded-xl text-xs transition">
+          <i class="fa-solid fa-check mr-1"></i>確認建立保留憑證
+        </button>
+        <button onclick="closeHoldCardModal()" class="px-4 py-2.5 border border-slate-300 text-slate-600 rounded-xl text-xs font-medium">
+          取消
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 浮動提示 Toast -->
+  <div id="toast" class="fixed top-14 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs font-medium px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300 z-50">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span id="toastMsg">已加入試算</span>
+  </div>
+
+  <!-- JavaScript 核心驅動 -->
+  <script>
+    // 2026.09.24 官方最新產品資料庫
+    const PRODUCTS = [
+      { sku: "LT-4712631059536", name: "視好視", spec: "30顆/盒", price: 1299, category: "保健", note: "" },
+      { sku: "LT-4712631059543", name: "覺好眠", spec: "30顆/盒", price: 1099, category: "保健", note: "" },
+      { sku: "TY-4711430510101", name: "固好捷", spec: "30粒/盒", price: 1499, category: "保健", note: "" },
+      { sku: "HF-4711430510019", name: "舒好芙", spec: "30包/盒", price: 1299, category: "保健", note: "" },
+      { sku: "HF-4711430510033", name: "淨好酵", spec: "30包/盒", price: 799, category: "保健", note: "" },
+      { sku: "HF-4711430510118", name: "穩好醣", spec: "60顆/盒", price: 999, category: "保健", note: "2026.09 調整" },
+      { sku: "HF-4711430510125", name: "究極薑黃", spec: "30顆/盒", price: 999, category: "保健", note: "2026.09 調整" },
+      { sku: "HF-4711430510255", name: "究極魚油", spec: "60顆/盒", price: 1099, category: "保健", note: "" },
+      { sku: "HF-S-RXM0030-02",  name: "覺好眠升級版", spec: "30顆/盒", price: 1299, category: "保健", note: "" },
+      { sku: "HF-S-RXM0010-02",  name: "覺好眠升級版", spec: "10顆/包", price: 499, category: "保健", note: "" },
+      { sku: "JD-4711430514024", name: "Clinico Care 好耳梭淨修護棉片", spec: "60片/瓶/盒", price: 490, category: "醫材", note: "" }
+    ];
+
+    const cart = new Map();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProducts();
+      renderCart();
+      updateCalculations();
+    });
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        const yOffset = -60;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+
+    function renderProducts() {
+      const mobileContainer = document.getElementById("mobileProductCards");
+      const desktopTbody = document.getElementById("desktopProductTable");
+      const search = document.getElementById("productSearch").value.trim().toLowerCase();
+      const cat = document.getElementById("categoryFilter").value;
+
+      mobileContainer.innerHTML = "";
+      desktopTbody.innerHTML = "";
+
+      PRODUCTS.forEach(p => {
+        const matchSearch = p.name.toLowerCase().includes(search) || p.sku.toLowerCase().includes(search);
+        const matchCat = (cat === "ALL") || (p.category === cat);
+
+        if (matchSearch && matchCat) {
+          const isUpdated = p.note.includes("2026.09");
+
+          // 手機版觸控卡片
+          const mCard = document.createElement("div");
+          mCard.className = "bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs flex items-center justify-between gap-3";
+          mCard.innerHTML = `
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="text-[10px] px-1.5 py-0.2 rounded font-medium ${p.category === '保健' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-sky-50 text-sky-700 border border-sky-200'}">${p.category}</span>
+                ${isUpdated ? '<span class="text-[10px] px-1.5 py-0.2 bg-amber-50 text-amber-700 border border-amber-200 rounded font-bold">2026.09 調價</span>' : ''}
+              </div>
+              <h4 class="font-bold text-slate-900 text-sm mt-1 truncate">${p.name}</h4>
+              <div class="text-[11px] text-slate-400 mt-0.5">${p.spec} ｜ <span class="font-mono text-slate-500">${p.sku}</span></div>
+              <div class="text-sm font-black text-slate-900 font-mono mt-1">NT$ ${p.price.toLocaleString()}</div>
+            </div>
+            <button onclick="addToCart('${p.sku}')" class="shrink-0 bg-emerald-50 active:bg-emerald-600 text-emerald-800 active:text-white border border-emerald-200 active:border-emerald-600 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-1">
+              <i class="fa-solid fa-plus text-[10px]"></i> 加入
+            </button>
+          `;
+          mobileContainer.appendChild(mCard);
+
+          // 桌機版表格行
+          const tr = document.createElement("tr");
+          tr.className = "hover:bg-slate-50 transition";
+          tr.innerHTML = `
+            <td class="py-3 px-4 text-center">
+              <span class="text-xs ${p.category === '保健' ? 'bg-emerald-50 text-emerald-700' : 'bg-sky-50 text-sky-700'} px-2 py-0.5 rounded font-medium">${p.category}</span>
+            </td>
+            <td class="py-3 px-4 font-mono text-xs text-slate-500">${p.sku}</td>
+            <td class="py-3 px-4 font-bold text-slate-900">${p.name}</td>
+            <td class="py-3 px-4 text-slate-600 text-xs">${p.spec}</td>
+            <td class="py-3 px-4 text-right font-mono font-bold text-slate-900">NT$ ${p.price.toLocaleString()}</td>
+            <td class="py-3 px-4 text-xs">
+              ${isUpdated ? '<span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">2026.09 調整</span>' : '<span class="text-slate-400">-</span>'}
+            </td>
+            <td class="py-3 px-4 text-center">
+              <button onclick="addToCart('${p.sku}')" class="bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white border border-emerald-200 px-3 py-1 rounded-lg text-xs font-bold transition">
+                + 加入
+              </button>
+            </td>
+          `;
+          desktopTbody.appendChild(tr);
+        }
+      });
+    }
+
+    function filterProducts() {
+      renderProducts();
+    }
+
+    function addToCart(sku, qty = 1) {
+      const current = cart.get(sku) || 0;
+      cart.set(sku, current + qty);
+      renderCart();
+      updateCalculations();
+      showToast(`已加入「${getProductName(sku)}」`);
+    }
+
+    function updateCartQty(sku, delta) {
+      const current = cart.get(sku) || 0;
+      const next = current + delta;
+      if (next <= 0) {
+        cart.delete(sku);
+      } else {
+        cart.set(sku, next);
+      }
+      renderCart();
+      updateCalculations();
+    }
+
+    function resetCart() {
+      cart.clear();
+      renderCart();
+      updateCalculations();
+      showToast("已清空選購清單");
+    }
+
+    function getProductName(sku) {
+      const p = PRODUCTS.find(item => item.sku === sku);
+      return p ? p.name : sku;
+    }
+
+    function renderCart() {
+      const container = document.getElementById("cartItemsList");
+      container.innerHTML = "";
+
+      let totalUnits = 0;
+      cart.forEach(qty => totalUnits += qty);
+
+      document.getElementById("cartTotalItemsBadge").textContent = `共 ${totalUnits} 件`;
+      document.getElementById("miniCartCountBadge").textContent = totalUnits;
+
+      if (cart.size === 0) {
+        container.innerHTML = `
+          <div class="text-center py-6 text-slate-400">
+            <p class="text-xs">尚未挑選商品，請點選上方品項加入</p>
+          </div>
+        `;
+        return;
+      }
+
+      cart.forEach((qty, sku) => {
+        const prod = PRODUCTS.find(p => p.sku === sku);
+        if (!prod) return;
+
+        const subtotal = prod.price * qty;
+        const row = document.createElement("div");
+        row.className = "flex items-center justify-between p-2 rounded-xl bg-slate-50 border border-slate-200 text-xs";
+        row.innerHTML = `
+          <div class="flex-1 pr-1">
+            <div class="font-bold text-slate-800 line-clamp-1">${prod.name}</div>
+            <div class="text-[10px] text-slate-500 font-mono">NT$ ${prod.price} × ${qty} = NT$ ${subtotal.toLocaleString()}</div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button onclick="updateCartQty('${sku}', -1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 active:bg-slate-200 flex items-center justify-center font-bold text-slate-700">
+              -
+            </button>
+            <span class="w-6 text-center font-bold font-mono text-slate-900">${qty}</span>
+            <button onclick="updateCartQty('${sku}', 1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 active:bg-slate-200 flex items-center justify-center font-bold text-slate-700">
+              +
+            </button>
+            <button onclick="cart.delete('${sku}'); renderCart(); updateCalculations();" class="text-slate-400 active:text-rose-600 p-1 ml-0.5">
+              <i class="fa-solid fa-trash-can text-xs"></i>
+            </button>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    function updateCalculations() {
+      let totalUnits = 0;
+      let originalTotal = 0;
+
+      cart.forEach((qty, sku) => {
+        const prod = PRODUCTS.find(p => p.sku === sku);
+        if (prod) {
+          totalUnits += qty;
+          originalTotal += prod.price * qty;
+        }
+      });
+
+      let rate = 1.0;
+      let badgeText = "未享折抵 (原價)";
+      let badgeClass = "bg-slate-700 text-slate-300 border-slate-600";
+      let nextHint = "滿 2 罐立即享 8 折！";
+      let miniHint = "選 2 罐立即享 8 折";
+      let progressPercent = 0;
+
+      if (totalUnits >= 8) {
+        rate = 0.65;
+        badgeText = "現場專案 65 折 (-35%)";
+        badgeClass = "bg-amber-500 text-slate-950 font-black border-amber-400";
+        nextHint = "已享最高 65 折專案！";
+        miniHint = "已達最高 65 折！";
+        progressPercent = 100;
+      } else if (totalUnits >= 6) {
+        rate = 0.70;
+        badgeText = "現場專案 7 折 (-30%)";
+        badgeClass = "bg-teal-600 text-white font-bold border-teal-500";
+        nextHint = `再選購 ${8 - totalUnits} 罐即升等 65 折！`;
+        miniHint = `再差 ${8 - totalUnits} 罐直升 65 折`;
+        progressPercent = 75;
+      } else if (totalUnits >= 4) {
+        rate = 0.75;
+        badgeText = "推薦方案 75 折 (-25%)";
+        badgeClass = "bg-emerald-600 text-white font-bold border-emerald-500";
+        nextHint = `再選購 ${6 - totalUnits} 罐即升等 7 折！`;
+        miniHint = `再差 ${6 - totalUnits} 罐升 7 折`;
+        progressPercent = 50;
+      } else if (totalUnits >= 2) {
+        rate = 0.80;
+        badgeText = "現場特惠 8 折 (-20%)";
+        badgeClass = "bg-emerald-700 text-white font-bold border-emerald-600";
+        nextHint = `再選購 ${4 - totalUnits} 罐即直升 75 折！`;
+        miniHint = `再差 ${4 - totalUnits} 罐直升 75 折`;
+        progressPercent = 25;
+      } else if (totalUnits === 1) {
+        nextHint = "再多挑 1 罐立即啟動 8 折！";
+        miniHint = "再加 1 罐整單打 8 折！";
+        progressPercent = 12;
+      }
+
+      const finalPrice = Math.round(originalTotal * rate);
+      const saved = originalTotal - finalPrice;
+      const avgPrice = totalUnits > 0 ? Math.round(finalPrice / totalUnits) : 0;
+
+      document.getElementById("calcOriginalPrice").textContent = `NT$ ${originalTotal.toLocaleString()}`;
+      document.getElementById("calcFinalPrice").textContent = `NT$ ${finalPrice.toLocaleString()}`;
+      document.getElementById("calcDiscountSaved").textContent = `- NT$ ${saved.toLocaleString()}`;
+      document.getElementById("calcAvgPrice").textContent = `NT$ ${avgPrice.toLocaleString()} / 罐`;
+      document.getElementById("calcDiscountRateLabel").textContent = `現場折抵 (${Math.round((1 - rate) * 100)}%)`;
+
+      const badge = document.getElementById("discountBadge");
+      badge.textContent = badgeText;
+      badge.className = `text-[10px] font-black px-2.5 py-0.5 rounded-full border ${badgeClass}`;
+
+      document.getElementById("tierProgressBar").style.width = `${progressPercent}%`;
+      document.getElementById("tierNextHint").textContent = nextHint;
+      document.getElementById("tierStatusLabel").textContent = `${totalUnits} 罐`;
+
+      document.getElementById("miniCartFinalPrice").textContent = `NT$ ${finalPrice.toLocaleString()}`;
+      document.getElementById("miniCartHint").textContent = miniHint;
+
+      updatePitchPrompt(totalUnits, saved);
+    }
+
+    function updatePitchPrompt(units, saved) {
+      const pitch = document.getElementById("pitchPromptText");
+      if (units === 0) {
+        pitch.innerHTML = `「張大哥，今天只要帶 2 罐就直接打 8 折！您平常注重活力代謝還是手腳靈活？先幫您搭配一組試試看！」`;
+      } else if (units < 2) {
+        pitch.innerHTML = `「張大姊，再多挑一罐<strong>【穩好醣】</strong>或<strong>【固好捷】</strong>，兩罐整單直接打 8 折，等於多省好幾百元！」`;
+      } else if (units < 4) {
+        pitch.innerHTML = `「大哥真內行！現在 2 罐享 8 折，但只要湊滿 4 罐直接跳 <strong>75 折</strong>，帶固好捷顧行動力最划算！」`;
+      } else {
+        pitch.innerHTML = `「張先生，挑這組總共 ${units} 罐適用專屬特惠，<strong>當場替您現省 NT$ ${saved.toLocaleString()}</strong>！我馬上請哲禎為您辦理！」`;
+      }
+    }
+
+    function applyPreset(type) {
+      cart.clear();
+      if (type === 'mobility_sugar') {
+        cart.set("TY-4711430510101", 2);
+        cart.set("HF-4711430510118", 2);
+        showToast("已套用【行動代謝組】(4罐75折)");
+      } else if (type === 'eyes_sleep') {
+        cart.set("LT-4712631059536", 2);
+        cart.set("HF-S-RXM0030-02", 2);
+        showToast("已套用【晶亮好眠組】(4罐75折)");
+      } else if (type === 'max_discount') {
+        cart.set("TY-4711430510101", 2);
+        cart.set("HF-4711430510118", 2);
+        cart.set("HF-4711430510255", 2);
+        cart.set("HF-4711430510125", 2);
+        showToast("已套用【尊榮全家包】(8罐65折)");
+      }
+      renderCart();
+      updateCalculations();
+      scrollToSection('calculator');
+    }
+
+    function openHoldCardModal() {
+      if (cart.size === 0) {
+        alert("請先選擇至少 1 項商品，才能開立保留卡！");
+        return;
+      }
+
+      let summaryHtml = "<ul class='space-y-1 list-disc list-inside text-xs'>";
+      let totalUnits = 0;
+      let orig = 0;
+      cart.forEach((qty, sku) => {
+        const prod = PRODUCTS.find(p => p.sku === sku);
+        if (prod) {
+          totalUnits += qty;
+          orig += prod.price * qty;
+          summaryHtml += `<li>${prod.name} × ${qty}</li>`;
+        }
+      });
+
+      let rate = 1.0;
+      if (totalUnits >= 8) rate = 0.65;
+      else if (totalUnits >= 6) rate = 0.70;
+      else if (totalUnits >= 4) rate = 0.75;
+      else if (totalUnits >= 2) rate = 0.80;
+
+      const finalPrice = Math.round(orig * rate);
+      const saved = orig - finalPrice;
+
+      summaryHtml += `</ul><div class='mt-2 pt-2 border-t border-slate-200 font-bold text-slate-800 flex justify-between text-xs'><span>共 ${totalUnits} 罐 (${Math.round(rate*100)}折)</span><span class='text-emerald-700'>專案價: NT$ ${finalPrice.toLocaleString()} (省$${saved.toLocaleString()})</span></div>`;
+
+      document.getElementById("holdCardSummary").innerHTML = summaryHtml;
+      document.getElementById("holdCardModal").classList.remove("hidden");
+    }
+
+    function closeHoldCardModal() {
+      document.getElementById("holdCardModal").classList.add("hidden");
+    }
+
+    function printHoldCard() {
+      const name = document.getElementById("holdCardName").value.trim() || "貴賓客戶";
+      showToast(`已為【${name}】登記 48 小時優惠保留卡！`);
+      setTimeout(() => {
+        closeHoldCardModal();
+      }, 600);
+    }
+
+    function copyText(elementId) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("講稿已成功複製！");
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      document.getElementById("toastMsg").textContent = msg;
+      toast.classList.remove("opacity-0", "pointer-events-none");
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "pointer-events-none");
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
